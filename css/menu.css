@@ -1,0 +1,129 @@
+/* Documento de estilos para a página do menu */
+
+body{
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	font-size: 16px;
+}
+
+.content{
+	margin:20px 50px;
+}
+
+h1 {
+    color:#FA6900;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+ 
+/* pseudo-classe :target*/
+h1:target {
+   font-size: 23px;
+	color: #492C26;
+}
+
+h2 {
+    color:#FA6900;
+    font-size: 17px;
+    font-style: italic;
+    margin-left: 25px;
+}
+ 
+/* pseudo-classe :target*/
+h2:target {
+   font-size: 19px;
+	color: #492C26;
+}
+
+a{
+	text-decoration: none;
+}
+
+body > ul{
+	list-style: none;
+	font-size: 17px;
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	font-weight: bold;
+}
+
+body > ul > li{
+	float: left;
+	position: relative;
+	margin-left: 4px;
+}
+
+/* pseudo-classe :first-child*/
+body > ul > li:first-child{
+	margin-left: 0;
+}
+
+body > ul > li > a{
+	color:#492C26;
+	padding: 10px 15px;
+
+	/* Uso de gradiente */
+	background: -webkit-linear-gradient(#5bbcc9, #E7E9DC, #fff);
+	background: -o-linear-gradient(#5bbcc9, #E7E9DC, #fff);
+	background: -moz-linear-gradient(#5bbcc9, #E7E9DC, #fff);
+	background: linear-gradient(#5bbcc9, #E7E9DC, #fff);
+
+	/* Uso de bordas arredondadas */
+	-webkit-border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+	border: 1px dashed #000;
+}
+
+/* pseudo-classe :hover*/
+body > ul > li > a:hover{
+	color: #fa6900;
+}
+
+body > ul > li > ul{
+	padding: 4px 7px;
+	visibility: hidden;
+	position: absolute;
+
+	/*Utilização de transition para mostrar o submenu*/
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	-moz-opacity: 0.00;
+	opacity: 0.00;
+	
+}
+
+/* pseudo-classe :hover*/
+body > ul > li:hover > ul{
+	-moz-opacity: 1;
+	opacity: 1;
+	visibility: visible;
+	text-align: left;
+	background: #E7E9DC;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	padding: 6px 7px;
+	margin-top:10px;
+
+	/* Uso de gradiente */
+	background: -webkit-linear-gradient(#5bbcc9, #E7E9DC, #fff);
+	background: -o-linear-gradient(#5bbcc9, #E7E9DC, #fff);
+	background: -moz-linear-gradient(#5bbcc9, #E7E9DC, #fff);
+	background: linear-gradient(#5bbcc9, #E7E9DC, #fff);
+}
+
+body > ul > li > ul > li{
+	display: block;
+	font-size: 13px;
+	margin-bottom: 7px;
+}
+
+body > ul > li > ul > li > a{
+	color: #fa6900;
+}
+
+/* pseudo-classe :hover*/
+body > ul > li > ul > li > a:hover{
+	color: #492C26;
+}
